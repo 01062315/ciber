@@ -20,10 +20,8 @@ h1 {
   margin: 0;
   font-size: 32px;
   position: relative;
-  z-index: 2; /* Asegura que el título esté en el frente */
+  z-index: 2;
 }
-
-
 
 h2 {
   font-size: 24px;
@@ -52,13 +50,13 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Asegura que el video esté detrás del título */
+  z-index: 1;
 }
 
 .my-video {
   object-fit: cover;
-  max-width: 100%; /* Ajusta el tamaño máximo del video según tus preferencias */
-  max-height: 100%; /* Ajusta el tamaño máximo del video según tus preferencias */
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .text-animation {
@@ -81,40 +79,16 @@ footer {
   }
 }
 
-/* Estilos para el menú "label words chars splitting" 
-
-.label {
-  display: inline-block;
-}
-
-.words {
+/* Animación de palabras */
+.ciberseguridad,
+.mr_wvrhite {
   display: inline-block;
   position: relative;
   overflow: hidden;
 }
 
-.char {
-  display: inline-block;
-  transform: translateX(100%);
-  animation: charAnimation 0.5s ease-out forwards;
-}
-
-@keyframes charAnimation {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-} */
-/* Estilos para el texto "ciberseguridad" arriba */
-.ciberseguridad {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-.ciberseguridad .word {
+.ciberseguridad .word,
+.mr_wvrhite .word {
   display: inline-block;
   transform: translateY(-100%);
   animation: wordAnimation 0.5s ease-out forwards;
@@ -127,19 +101,6 @@ footer {
   100% {
     transform: translateY(0);
   }
-}
-
-/* Estilos para el texto "MR_WVRHITE" abajo */
-.mr_wvrhite {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-
-.mr_wvrhite .word {
-  display: inline-block;
-  transform: translateY(100%);
-  animation: wordAnimation 0.5s ease-out forwards;
 }
 
 .section {
@@ -162,9 +123,36 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* Estilos para la sección "Sobre Mí" */
 #about {
-  background-image: url('');
-  background-size: cover;
-  background-position: center;
+  background: #fd0000;
+  background-color: rgb(253, 0, 0);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: none;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  transition: .2s all ease-out;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+  font-family: "Fatman-Medium", sans-serif !important;
 }
 
+#about:hover, #about:active, #about:focus {
+  outline: none !important;
+  outline-color: currentcolor;
+  outline-style: none;
+  outline-width: medium;
+  font-size: 1.1rem;
+}
+#about h2,
+#about p {
+  color: #fff;
+  font-family: "Fatman-Medium", sans-serif !important;
+}

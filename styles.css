@@ -156,3 +156,161 @@ footer {
   color: #fff;
   font-family: "Fatman-Medium", sans-serif !important;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 40vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.site-header_globe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.my-video {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text-animation {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-animation::after {
+  content: attr(data-text);
+  position: absolute;
+  animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Animación de palabras */
+.ciberseguridad,
+.mr_wvrhite {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.ciberseguridad .word,
+.mr_wvrhite .word {
+  display: inline-block;
+  transform: translateY(-100%);
+  animation: wordAnimation 0.5s ease-out forwards;
+}
+
+@keyframes wordAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeAnimation 1s ease-in-out forwards;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para la sección "Sobre Mí" */
+#about {
+  background: #fd0000;
+  background-color: rgb(4, 1, 20);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: none;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  transition: .2s all ease-out;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+  font-family: "Fatman-Medium", sans-serif !important;
+}
+
+#about:hover, #about:active, #about:focus {
+  outline: none !important;
+  outline-color: currentcolor;
+  outline-style: none;
+  outline-width: medium;
+  font-size: 1.1rem;
+}
+#about h2,
+#about p {
+  color: #fff;
+  font-family: "Fatman-Medium", sans-serif !important;
+}

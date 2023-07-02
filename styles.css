@@ -152,6 +152,14 @@ footer {
   font-family: "Fatman-Medium", sans-serif !important;
 }
 
+/* Estilos generales */
+body {
+  font-family: "Adriana Font", sans-serif; /* Reemplaza "Adriana Font" con la fuente elegida por Adriana */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para la sección "Aspectos Destacados" */
 #highlights {
   background: #fd0000;
   background-color: rgb(0, 0, 0);
@@ -159,35 +167,87 @@ footer {
   padding: 40px;
 }
 
-#highlights h2 {
+#highlights .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#highlights .box {
+  width: calc(50% - 20px); /* Ajusta el ancho según sea necesario */
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+#highlights .box h2 {
   font-size: 24px;
-  font-family: "Arial", sans-serif;
+  font-family: "Squada One", sans-serif;
+  color: #000;
+  text-align: center; /* Centra el encabezado "Aspectos Destacados" */
 }
 
-#highlights ol {
-  list-style: none;
-  counter-reset: highlight-counter;
-  padding-left: 0;
+#highlights .box ol {
+  list-style-type: disc; /* Usa puntos en lugar de números */
+  padding-left: 20px;
+  color: #000;
 }
 
-#highlights ol li {
-  position: relative;
+
+#contacto {
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+#contacto .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#contacto .contact-box {
+  width: 600px;
+  padding: 40px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+#contacto h2 {
+  font-size: 24px;
+  font-family: "Squada One", sans-serif;
+  margin-bottom: 20px;
+}
+
+#contacto .contact-info {
+  margin-top: 20px;
+}
+
+#contacto .contact-info p {
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-#highlights ol li::before {
-  content: counter(highlight-counter);
-  counter-increment: highlight-counter;
-  position: absolute;
-  left: -35px; /* Ajustar el valor según sea necesario */
-  top: 0;
-  font-weight: bold;
-  font-size: 18px;
-  color: #fff; /* Color personalizado para los números */
+#contacto .contact-info p:last-child {
+  margin-bottom: 0;
 }
 
-#highlights ol li span {
-  margin-left: 10px;
-  font-family: "Arial", sans-serif; /* Fuente personalizada para los elementos de la lista */
+#contacto .contact-info a {
+  color: #fff;
+  text-decoration: none;
 }
 
+#contacto .contact-info a:hover {
+  text-decoration: underline;
+}
+.highlights_globe {
+  width: 205px; /* Ajusta el ancho deseado */
+  height: auto; /* La altura se ajustará automáticamente según la proporción original del GIF */
+
+  position: absolute; /* Establece la posición absoluta */
+  top: -13px; /* Ajusta la distancia desde la parte superior */
+  left: 532px; /* Ajusta la distancia desde la izquierda */
+}
